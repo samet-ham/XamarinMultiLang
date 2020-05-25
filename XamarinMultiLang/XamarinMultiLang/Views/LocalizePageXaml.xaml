@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:i18n="clr-namespace:XamarinMultiLang.Localization;assembly=XamarinMultiLang"
+             x:Class="XamarinMultiLang.Views.LocalizePageXaml">
+    <ContentPage.Content>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+            <TableView Intent="Form">
+                <TableRoot>
+                    <TableSection Title="{i18n:Translate FormName}">
+                        <EntryCell Text="{i18n:Translate Name}"></EntryCell>
+                        <EntryCell Text="{i18n:Translate Surname}"></EntryCell>
+                        <!--<EntryCell Text="{i18n:Translate Password}"></EntryCell>-->
+                        <EntryCell Placeholder="{i18n:Translate Password}"></EntryCell>
+                        <ViewCell>
+                            <Button Text="{i18n:TranslateExtension Text=Save}"></Button>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
